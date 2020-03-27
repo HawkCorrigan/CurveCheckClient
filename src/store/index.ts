@@ -5,11 +5,19 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+      user: {
+          loggedIn: false,
+      }
   },
   mutations: {
   },
   actions: {
   },
   modules: {
-  }
+  },
+    getters: {
+      auth(state) {
+         return state.user;
+      }
+    }
 })
